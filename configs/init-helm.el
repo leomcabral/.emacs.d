@@ -1,7 +1,8 @@
 ;; Helm init/config
 (use-package helm
   :config
-  (helm-mode 1))
+  (helm-mode 1)
+  (setq helm-mode-fuzzy-match t))
 
 (use-package helm-ag)
 (use-package helm-descbinds)
