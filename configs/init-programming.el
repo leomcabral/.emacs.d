@@ -6,8 +6,14 @@
 (use-package projectile
   :ensure t
   :config
-  (projectile-global-mode)
-  (setq projectile-completion-system 'ivy))
+  (setq projectile-completion-system 'ivy
+	projectile-project-search-path '("~/Dev"))
+
+  ;;keybindings
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  (projectile-mode 1))
+(projectile-mode +1)
 (use-package counsel-projectile
   :ensure t
   :config
